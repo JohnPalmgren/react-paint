@@ -1,7 +1,7 @@
 import "../App.css";
-import { useEffect, useRef, useState } from "react";
-
-const Canvas = () => {
+import { useEffect, useRef, useState, forwardRef, useImperativeHandle } from "react";
+//forwardRef will let the parent app access methods of the child component
+  const Canvas = forwardRef((props, ref) => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
   const canvasWidth = "500px";
@@ -50,10 +50,14 @@ const Canvas = () => {
     );
     contextRef.current.stroke();
 
-    const clearCanvas = () => {
-      contextRef.current.clearRect(0, 0, canvasWidth, canvasHeight);
-    }
-  };
+    };
+
+
+    useImperativeHandle(ref, () => ({
+   clearCanvas: () => {
+     contextRef.current.clearRect(0, 0, canvasWidth, canvasHeight);
+   }
+ }));
 
   return (
     <canvas
@@ -66,6 +70,6 @@ const Canvas = () => {
       height={canvasHeight}
     />
   );
-};
+});
 
 export default Canvas;
