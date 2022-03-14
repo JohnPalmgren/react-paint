@@ -4,10 +4,11 @@ import { useEffect, useRef, useState } from "react";
 const Canvas = () => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
+  const canvasWidth = "500px";
+  const canvasHeight = "500px";
 
   // state set when mouse is pressed and removed when mouse is released
-  const [isDrawing, setIsDrawing] = useState("false");
-
+  const [isDrawing, setIsDrawing] = useState(false);
 
   // useEffect initialises the default canvas styles when the component first runs
   // Add color and line width here from buttons (through props) and add as dependencies
@@ -47,8 +48,11 @@ const Canvas = () => {
       event.nativeEvent.offsetX,
       event.nativeEvent.offsetY
     );
-
     contextRef.current.stroke();
+
+    const clearCanvas = () => {
+      contextRef.current.clearRect(0, 0, canvasWidth, canvasHeight);
+    }
   };
 
   return (
@@ -58,8 +62,8 @@ const Canvas = () => {
       onMouseUp={endDrawing}
       onMouseMove={draw}
       ref={canvasRef}
-      width={"500px"}
-      height={"500px"}
+      width={canvasWidth}
+      height={canvasHeight}
     />
   );
 };
