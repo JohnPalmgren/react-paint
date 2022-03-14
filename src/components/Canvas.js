@@ -1,11 +1,11 @@
 import "../App.css";
 import { useEffect, useRef, useState } from "react";
 
-const Canvas = () => {
-  const canvasRef = useRef(null);
-  const contextRef = useRef(null);
+const Canvas = (props) => {
 
-  // state set when mouse is pressed and removed when mouse is released
+  const canvasRef = props.canvasRef
+  const contextRef = props.contextRef
+    // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
 
 
@@ -53,6 +53,7 @@ const Canvas = () => {
 
   return (
     <canvas
+      id={"paintcanvas"}
       className={"canvas"}
       onMouseDown={startDrawing}
       onMouseUp={endDrawing}
