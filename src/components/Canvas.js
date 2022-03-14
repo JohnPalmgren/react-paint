@@ -6,7 +6,7 @@ const Canvas = () => {
   const contextRef = useRef(null);
 
   // state set when mouse is pressed and removed when mouse is released
-  const [isDrawing, setIsDrawing] = useState("false");
+  const [isDrawing, setIsDrawing] = useState(false);
 
 
   // useEffect initialises the default canvas styles when the component first runs
