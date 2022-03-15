@@ -1,11 +1,12 @@
 import "../App.css";
 import React from "react";
 
+
 const Menu = ({ setLineWidth, setLineColor }) => {
     return (
         <div className="menu">
-            <label>Brush Width</label>
-            <input
+            <label className = "icon brush"></label>
+            <input className = "slider"
                 type="range"
                 min="3"
                 max="20"
@@ -13,14 +14,15 @@ const Menu = ({ setLineWidth, setLineColor }) => {
                     setLineWidth(e.target.value);
                 }}
             />
-            <label>Brush Colour </label>
-            <input
+            <label className = "icon palette"></label>
+            <input className = "icon"
                 type="color"
                 onChange={(e) => {
                     setLineColor(e.target.value);
                 }}
             />
-        </div>
+    
+                    </div>
     )
 }
 export default Menu;

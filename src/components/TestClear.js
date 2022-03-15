@@ -3,7 +3,7 @@ import "../App.css";
 const ClearButton = (props) => {
 
   return (
-    <button onClick={() => props.clearCanvas()}>Clear the Canvas</button>)
+    <button className = "icon bin" onClick={() => props.clearCanvas()}></button>)
 };
 
 export default ClearButton;

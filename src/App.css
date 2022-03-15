@@ -13,7 +13,50 @@
   border: 1px solid black;
   width: 500px;
   height: 500px;
+
 }
+
+/* brush label */
+.icon {
+  height: 3rem;
+  width: 3rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: url("./Icons/Pen.svg");
+  background-size: 80%;
+  background-color: whitesmoke;
+
+}
+
+.brush {
+  background-image: url("./Icons/Pen.svg");
+}
+
+.bin {
+  background-image: url("./Icons/Bin.svg");
+  border: none;
+}
+
+.palette {
+  background-image: url("./Icons/Palette.svg");
+}
+
+.slider {
+  margin-left: 1rem;
+}
+
+
+.menu {
+  display: flex;
+  background-color: #004163;
+  width: 500px;
+  height: 80px;
+
+}
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -40,6 +83,7 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }

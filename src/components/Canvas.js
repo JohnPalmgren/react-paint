@@ -6,9 +6,9 @@ const Canvas = (props) => {
 
   const canvasRef = props.canvasRef
   const contextRef = props.contextRef
-    // state set when mouse is pressed and removed when mouse is released
+  // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
-    // state set line width and line color 
+  // state set line width and line color 
   const [lineWidth, setLineWidth] = useState(5);
   const [lineColor, setLineColor] = useState("black");
 
@@ -24,6 +24,8 @@ const Canvas = (props) => {
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = lineColor;
     contextRef.current = ctx;
+
+
   }, [lineWidth, lineColor]);
 
   // function runs when mouse button is pressed.
@@ -60,20 +62,20 @@ const Canvas = (props) => {
 
   return (
     <>
-    <canvas
-      id={"paintcanvas"}
-      className={"canvas"}
-      onMouseDown={startDrawing}
-      onMouseUp={endDrawing}
-      onMouseMove={draw}
-      ref={canvasRef}
-      width={"500px"}
-      height={"500px"}
-    />
-    <Menu
-          setLineColor={setLineColor}
-          setLineWidth={setLineWidth}
-        />
+      <canvas
+        id={"paintcanvas"}
+        className={"canvas"}
+        onMouseDown={startDrawing}
+        onMouseUp={endDrawing}
+        onMouseMove={draw}
+        ref={canvasRef}
+        width={"500px"}
+        height={"500px"}
+      />
+      <Menu
+        setLineColor={setLineColor}
+        setLineWidth={setLineWidth}
+      />
 
     </>
   );
