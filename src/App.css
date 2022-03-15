@@ -7,6 +7,14 @@
   pointer-events: none;
 }
 
+/* canvas styles */
+
+.canvas {
+  border: 1px solid black;
+  width: 500px;
+  height: 500px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;

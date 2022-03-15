@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+
+import Canvas from "./components/Canvas"
+import Button from "./components/TestClear.js"
+import { useRef } from "react";
 
 function App() {
+
+  //hoisting these refs to the parent app lets us use them with the button
+  const canvasRef = useRef(null);
+  const contextRef = useRef(null);
+
+  const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+    <Canvas canvasRef={canvasRef} contextRef={contextRef} />
+    <Button clearCanvas={clearCanvas} />
     </div>
   );
 }
