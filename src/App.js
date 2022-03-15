@@ -10,11 +10,11 @@ function App() {
   const contextRef = useRef(null);
 
   const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
-
   return (
     <div>
     <Canvas canvasRef={canvasRef} contextRef={contextRef} />
     <Button clearCanvas={clearCanvas} />
+    
     </div>
   );
 }
