@@ -1,5 +1,5 @@
 import "../App.css";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 const Canvas = (props) => {
 

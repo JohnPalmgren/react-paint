@@ -1,7 +1,7 @@
 
 import Canvas from "./components/Canvas"
 import Button from "./components/TestClear.js"
-import { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 
 function App() {
 
