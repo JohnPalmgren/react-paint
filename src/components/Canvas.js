@@ -59,7 +59,7 @@ const Canvas = (props) => {
       onMouseUp={endDrawing}
       onMouseMove={draw}
       ref={canvasRef}
-      width={"500px"}
+      width={"1200px"}
       height={"500px"}
     />
   );
