@@ -4,14 +4,11 @@ import Menu from "./Menu";
 
 const Canvas = (props) => {
 
-  const height = "500px";
-  const width = "1200px";
-
   const canvasRef = props.canvasRef
   const contextRef = props.contextRef
   // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
-  // state set line width and line color
+  // state set line width and line color 
   const [lineWidth, setLineWidth] = useState(5);
   const [lineColor, setLineColor] = useState("black");
 
@@ -72,8 +69,8 @@ const Canvas = (props) => {
         onMouseUp={endDrawing}
         onMouseMove={draw}
         ref={canvasRef}
-        width={width}
-        height={height}
+        width={"500px"}
+        height={"500px"}
       />
       <Menu
         setLineColor={setLineColor}

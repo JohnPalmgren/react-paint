@@ -1,20 +1,12 @@
 import "../App.css";
 import { useEffect, useState } from "react";
-import Menu from "./Menu";
 
 const Canvas = (props) => {
 
-  const height = "500px";
-  const width = "1200px";
-
   const canvasRef = props.canvasRef
   const contextRef = props.contextRef
-  // state set when mouse is pressed and removed when mouse is released
+    // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
-  // state set line width and line color
-  const [lineWidth, setLineWidth] = useState(5);
-  const [lineColor, setLineColor] = useState("black");
-
 
 
   // useEffect initialises the default canvas styles when the component first runs
@@ -24,12 +16,8 @@ const Canvas = (props) => {
     const ctx = canvas.getContext("2d");
     ctx.lineCap = "round";
     ctx.lineJoin = "round";
-    ctx.lineWidth = lineWidth;
-    ctx.strokeStyle = lineColor;
     contextRef.current = ctx;
-
-
-  }, [lineWidth, lineColor]);
+  }, []);
 
   // function runs when mouse button is pressed.
   // updates canvas context to set position to be drawn on
@@ -64,23 +52,16 @@ const Canvas = (props) => {
   };
 
   return (
-    <>
-      <canvas
-        id={"paintcanvas"}
-        className={"canvas"}
-        onMouseDown={startDrawing}
-        onMouseUp={endDrawing}
-        onMouseMove={draw}
-        ref={canvasRef}
-        width={width}
-        height={height}
-      />
-      <Menu
-        setLineColor={setLineColor}
-        setLineWidth={setLineWidth}
-      />
-
-    </>
+    <canvas
+      id={"paintcanvas"}
+      className={"canvas"}
+      onMouseDown={startDrawing}
+      onMouseUp={endDrawing}
+      onMouseMove={draw}
+      ref={canvasRef}
+      width={"1200px"}
+      height={"500px"}
+    />
   );
 };
 
