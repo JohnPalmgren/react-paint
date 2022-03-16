@@ -8,7 +8,7 @@ const Canvas = (props) => {
   const contextRef = props.contextRef
   // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
-  // state set line width and line color 
+  // state set line width and line color
   const [lineWidth, setLineWidth] = useState(5);
   const [lineColor, setLineColor] = useState("black");
 
