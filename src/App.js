@@ -1,20 +1,31 @@
 
 import Canvas from "./components/Canvas"
-import Button from "./components/TestClear.js"
-import { useRef } from "react";
+import Button from "./components/TestClear"
+import Menu from "./components/Menu"
+import { useRef, useState } from "react";
 
 function App() {
 
   //hoisting these refs to the parent app lets us use them with the button
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
+  const [lineWidth, setLineWidth] = useState(5);
+  const [lineColor, setLineColor] = useState("black");
 
   const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
   return (
     <div>
-    <Canvas canvasRef={canvasRef} contextRef={contextRef} />
-    <Button clearCanvas={clearCanvas} />
-    
+    <Canvas
+    canvasRef={canvasRef}
+    contextRef={contextRef}
+    lineWidth={lineWidth}
+    lineColor={lineColor} />
+    <Menu
+      setLineColor={setLineColor}
+      setLineWidth={setLineWidth}
+      clearCanvas={clearCanvas}
+
+    />
     </div>
   );
 }

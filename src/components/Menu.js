@@ -2,7 +2,7 @@ import "../App.css";
 import React from "react";
 
 
-const Menu = ({ setLineWidth, setLineColor }) => {
+const Menu = ({ setLineWidth, setLineColor, clearCanvas }) => {
     return (
         <div className="menu">
             <label className = "icon brush"></label>
@@ -21,7 +21,8 @@ const Menu = ({ setLineWidth, setLineColor }) => {
                     setLineColor(e.target.value);
                 }}
             />
-    
+
+            <button className = "icon bin" onClick={() => clearCanvas()}></button>
                     </div>
     )
 }

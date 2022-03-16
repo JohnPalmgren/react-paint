@@ -1,6 +1,6 @@
 import "../App.css";
 import { useEffect, useState } from "react";
-import Menu from "./Menu";
+
 
 const Canvas = (props) => {
 
@@ -12,8 +12,8 @@ const Canvas = (props) => {
   // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
   // state set line width and line color
-  const [lineWidth, setLineWidth] = useState(5);
-  const [lineColor, setLineColor] = useState("black");
+  const lineWidth = props.lineWidth;
+  const lineColor = props.lineColor;
 
 
 
@@ -74,10 +74,6 @@ const Canvas = (props) => {
         ref={canvasRef}
         width={width}
         height={height}
-      />
-      <Menu
-        setLineColor={setLineColor}
-        setLineWidth={setLineWidth}
       />
 
     </>
