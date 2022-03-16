@@ -14,7 +14,7 @@ const Menu = ({ setLineWidth, setLineColor, clearCanvas }) => {
                     setLineWidth(e.target.value);
                 }}
             />
-            <label className = "icon palette"></label>
+            {/* <label className = "icon palette"></label> */}
             <input className = "icon"
                 type="color"
                 onChange={(e) => {

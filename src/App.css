@@ -21,12 +21,12 @@ body {
   height: 3rem;
   width: 3rem;
   margin-top: 1rem;
-  margin-left: 1rem;
   background-repeat: no-repeat;
   background-position: center;
   background-image: url("./Icons/Pen.svg");
   background-size: 80%;
   background-color: whitesmoke;
+  
 
 }
 
@@ -37,7 +37,13 @@ body {
 .bin {
   background-image: url("./Icons/Bin.svg");
   border: none;
+  cursor: pointer;
+  transition-duration: 0.4s;
 }
+
+  .bin:hover {
+    background-color: #c4c4c4;
+  }
 
 .palette {
   background-image: url("./Icons/Palette.svg");
@@ -45,14 +51,20 @@ body {
 
 .slider {
   margin-left: 1rem;
+  cursor: pointer;
 }
 
 
 .menu {
   display: flex;
-  background-color: #004163;
+  background-color: #003049;
+  justify-content: space-between;
   width: 500px;
   height: 80px;
+  margin: 50px auto 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
 
 }
 
