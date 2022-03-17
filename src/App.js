@@ -1,6 +1,7 @@
 
 import Canvas from "./components/Canvas"
 import Button from "./components/TestClear.js"
+import Heading from "./components/Heading";
 import { useRef } from "react";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
   const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
   return (
     <div>
+      <Heading />
     <Canvas canvasRef={canvasRef} contextRef={contextRef} />
     <Button clearCanvas={clearCanvas} />
     

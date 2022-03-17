@@ -4,17 +4,39 @@ body {
   background-color: #004163;
 }
 
+/* header styles */
+.image {
+  width: 180px;
+  height: 180px;
+  background-image: url("./Images/paint.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin: 0 -280px 0 0;
+}
+
+.headingH1 {
+  color: rgb(238, 238, 238);
+  font-size: 4rem;
+  text-align: center;
+  font-family: 'Luckiest Guy', sans-serif;
+  letter-spacing: 4px;
+}
+
+.headingWrapper {
+  display: flex;
+    justify-content: center;
+}
+
 /* canvas styles */
 .canvas {
   display: block;
-  margin: 50px auto 0 auto;
+  margin: 0 auto 0 auto;
   background-color: #fff;
   border: 1px solid black;
   /* width: 1200px; */
   height: 500px;
 
 }
-
 
 /* brush label */
 .icon {
