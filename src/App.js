@@ -1,8 +1,8 @@
 
 import Canvas from "./components/Canvas"
-import Button from "./components/TestClear.js"
 import Heading from "./components/Heading";
-import { useRef } from "react";
+import Menu from "./components/Menu";
+import { useRef, useState } from "react";
 
 function App() {
 
@@ -10,13 +10,24 @@ function App() {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
 
+  const [lineWidth, setLineWidth] = useState(5);
+  const [lineColor, setLineColor] = useState("black");
+
   const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
   return (
-    <div>
+    <div className="background" style={{ backgroundColor: lineColor }}>
       <Heading />
-    <Canvas canvasRef={canvasRef} contextRef={contextRef} />
-    <Button clearCanvas={clearCanvas} />
-    
+      <Canvas
+        canvasRef={canvasRef}
+        contextRef={contextRef}
+        lineWidth={lineWidth}
+        lineColor={lineColor}
+      />
+      <Menu
+        setLineColor={setLineColor}
+        setLineWidth={setLineWidth}
+        clearCanvas={clearCanvas}
+      />
     </div>
   );
 }

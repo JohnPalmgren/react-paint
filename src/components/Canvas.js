@@ -3,19 +3,19 @@ import { useEffect, useState } from "react";
 import Menu from "./Menu";
 
 const Canvas = (props) => {
-
   const height = "500px";
   const width = "1200px";
 
-  const canvasRef = props.canvasRef
-  const contextRef = props.contextRef
+  const lineWidth = props.lineWidth;
+  const lineColor = props.lineColor;
+
+  const canvasRef = props.canvasRef;
+  const contextRef = props.contextRef;
   // state set when mouse is pressed and removed when mouse is released
   const [isDrawing, setIsDrawing] = useState(false);
   // state set line width and line color
-  const [lineWidth, setLineWidth] = useState(5);
-  const [lineColor, setLineColor] = useState("black");
-
-
+  // const [lineWidth, setLineWidth] = useState(5);
+  // const [lineColor, setLineColor] = useState("black");
 
   // useEffect initialises the default canvas styles when the component first runs
   // Add color and line width here from buttons (through props) and add as dependencies
@@ -27,8 +27,6 @@ const Canvas = (props) => {
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = lineColor;
     contextRef.current = ctx;
-
-
   }, [lineWidth, lineColor]);
 
   // function runs when mouse button is pressed.
@@ -75,11 +73,6 @@ const Canvas = (props) => {
         width={width}
         height={height}
       />
-      <Menu
-        setLineColor={setLineColor}
-        setLineWidth={setLineWidth}
-      />
-
     </>
   );
 };
