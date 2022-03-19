@@ -9,8 +9,8 @@ function App() {
   //hoisting these refs to the parent app lets us use them with the button
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
-  const [lineWidth, setLineWidth] = useState(5);
-  const [lineColor, setLineColor] = useState("black");
+  const [lineWidth, setLineWidth] = useState(20);
+  const [lineColor, setLineColor] = useState("#000");
 
   const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
   return (

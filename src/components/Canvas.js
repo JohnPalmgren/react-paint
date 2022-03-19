@@ -14,8 +14,8 @@ const Canvas = (props) => {
   // state set line width and line color
   const lineWidth = props.lineWidth;
   const lineColor = props.lineColor;
-
-
+  const cursorColor = lineColor.slice(1);
+  const cursor = `url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23${cursorColor}" opacity="1" height="${lineWidth}" viewBox="0 0 ${lineWidth} ${lineWidth}" width="${lineWidth}"><circle cx="${(lineWidth / 2)}" cy="${(lineWidth / 2)}" r="${(lineWidth / 2)}"  /></svg>') ${(lineWidth / 2)} ${(lineWidth / 2)}, auto`;
 
   // useEffect initialises the default canvas styles when the component first runs
   // Add color and line width here from buttons (through props) and add as dependencies
@@ -27,9 +27,8 @@ const Canvas = (props) => {
     ctx.lineWidth = lineWidth;
     ctx.strokeStyle = lineColor;
     contextRef.current = ctx;
-
-
   }, [lineWidth, lineColor]);
+
 
   // function runs when mouse button is pressed.
   // updates canvas context to set position to be drawn on
@@ -67,6 +66,7 @@ const Canvas = (props) => {
     <>
       <canvas
         id={"paintcanvas"}
+        style={{ cursor }}
         className={"canvas"}
         onMouseDown={startDrawing}
         onMouseUp={endDrawing}
