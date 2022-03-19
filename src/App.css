@@ -1,4 +1,3 @@
-
 /* global styles */
 /* body {
   background-color: #004163;
@@ -8,10 +7,18 @@
 .background {
   width: 100%;
   height: 100vh;
-  
 }
 
-/* header styles */
+/* ---------------- header styles ----------------- */
+
+
+.headingWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+/* splash logo */
 .image {
   width: 180px;
   height: 180px;
@@ -21,103 +28,256 @@
   margin: 0 -280px 0 0;
 }
 
+/* "PAINT SPLASH Text */
 .headingH1 {
-  color: rgb(238, 238, 238);
-  font-size: 4rem;
+  color: white;
+  font-size: 3rem;
   text-align: center;
   font-family: 'Luckiest Guy', sans-serif;
   letter-spacing: 4px;
+
 }
 
-.headingWrapper {
-  display: flex;
-    justify-content: center;
-}
 
-/* canvas styles */
+
+
+/* ---------------- Canvas styles ----------------- */
+
 .canvas {
   display: block;
   margin: 0 auto 0 auto;
-  background-color: #fff;
-  border: 1px solid black;
-  /* width: 1200px; */
-  /* height: 500px; */
+  background-color: white;
+  box-shadow:
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 50px;
 
 }
 
-/* brush label */
+/* ---------------- Menu styles ----------------- */
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  margin-top: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  display: flex;
+  justify-content: space-between;
+  background-color: inherit;
+  width: 500px;
+  height: 80px;
+  box-shadow:
+    12px 12px 16px 0 rgba(0, 0, 0, 0.25),
+    -8px -8px 12px 0 rgba(255, 255, 255, 0.3);
+  border-radius: 20px;
+}
+
+
 .icon {
   height: 3rem;
   width: 3rem;
   margin-top: 1rem;
-  margin-left: 1rem;
   background-repeat: no-repeat;
   background-position: center;
-  /* background-image: url("./Icons/Pen.svg"); */
   background-size: 80%;
-  background-color: whitesmoke;
   border-radius: 50px;
-  border: 1px solid #000;
 }
 
-.color {
-  border-radius: 0px;
-}
 
+/* Brush Icon */
 .brush {
-  background-image: url("./Icons/Pen.svg");
+  position: relative;
+  background-image: url("./Icons/brush.svg");
+  width: 23%;
+  bottom: 2px;
 }
-
+/* Bin Icon */
 .bin {
-  background-image: url("./Icons/Bin.svg");
-  border: none;
+  background-image: url("./Icons/bin-white.svg");
+  border: 2px solid white;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.palette {
-  background-image: url("./Icons/Palette.svg");
+.bin:hover {
+  opacity: 50%;
 }
 
+.bin:active {
+  opacity: 20%;
+}
+/* Slider  */
 .slider {
-  margin-left: 1rem;
+  margin-top: 2rem;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 50px;
+  border: 2px solid white;
+  background: none;
+  cursor: pointer;
+  
+
 }
 
-
-.menu {
+.slider-container {
   display: flex;
-  justify-content: center;
-  background-color: inherit;
-  height: 80px;
+  width: 280px;
+}
+
+/* Slider bar*/
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 8px;
+  height: 35px;
+  border-radius: 10%;
+  background: white;
+  cursor: pointer;
+
+}
+
+.slider:hover {
+  opacity: 80%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #004163;
+  cursor: pointer;
+}
+
+/* color swatch */
+#color {
+  -webkit-appearance: none;
+  padding: 0;
+  border: 2px solid white;
+  border-radius: 50%;
+  margin-top: 16px;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: 47px;
+  height: 47px;
+}
+
+#color:hover {
+  opacity: 70%;
+  cursor: pointer;
+}
+
+/* enables overide of 'starndard' color input */
+#color::-webkit-color-swatch {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* enables overide of 'starndard' color input */
+
+#color::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+}
+
+/* Github logo  */
+.githubIcon {
+  position: relative;
+  background-image: url("./Icons/GitHub.png");
+  background-repeat: no-repeat;
+  background-image: center;
+  background-size: 100%;
+  height: 47px;
+  width: 47px;
+  margin-top: 14px;
+  margin-left: 14px;
+  cursor: pointer;
+}
+
+.githubIcon:hover {
+  opacity: 70%;
+}
+
+.githubIcon:active {
+  opacity: 30%;
 }
 
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* -------------media queries----------- */
+
+/* Google Pixel 5 (mid size mobile phones */
+@media only screen and (max-width: 500px) {
+
+  .image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .headingH1 {
+    font-size: 2rem;
+    display: flex;
+    margin-left: 200px;
+  }
+  .headingWrapper {
+    margin-bottom: 4px;
+  }
+  .canvas {
+    position: relative;
+    bottom: 30px;
+  }
+
+  .menu {
+    position: relative;
+    bottom: 45px;
+    height: 150px;
+    flex-wrap: wrap;
+    width: 300px;
   }
 }
+/* iPhone SE (smaller mobile phones */
+@media only screen and (max-width: 375px) {
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  .canvas {
+    position: relative;
+    bottom: 30px;
   }
+  .menu {
+    position: relative;
+    bottom: 65px;
+    height: 120px;
+    flex-wrap: wrap;
+    width: 300px;
+    padding-bottom: 30px;
+  }
+ .brush {
+   margin-left: 20px;
+ }
+}
 
-  to {
-    transform: rotate(360deg);
+/* iPad Air*/
+@media only screen and (max-width: 820px) {
+  .headingWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .image {
+    right: 200px;
+    width: 80px;
+    height: 80px;
+  }
+  .headingH1 {
+    font-size: 2rem;
+    display: flex;
+    margin-left: 250px;
   }
 }

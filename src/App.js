@@ -11,7 +11,7 @@ function App() {
   const contextRef = useRef(null);
 
   const [lineWidth, setLineWidth] = useState(5);
-  const [lineColor, setLineColor] = useState("black");
+  const [lineColor, setLineColor] = useState("#f3722c");
 
   const clearCanvas = () => {contextRef.current.clearRect(0, 0, canvasRef.current.width, canvasRef.current.height);}
   return (
