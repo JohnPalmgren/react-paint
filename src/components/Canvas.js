@@ -3,10 +3,13 @@ import { useEffect, useState } from "react";
 import Menu from "./Menu";
 
 const Canvas = (props) => {
-  const height = "500px";
-  const width = "1200px";
+  //changes Canvas size with screen width 
+  const screenWidth = window.innerWidth - window.innerWidth/10 + "px";
+  const screenHeight = window.screen.height - window.screen.height/3 + "px";
+  const width = screenWidth;
+  const height = screenHeight;
 
-  const lineWidth = props.lineWidth;
+  const lineWidth = props.lineWidth
   const lineColor = props.lineColor;
 
   const canvasRef = props.canvasRef;
