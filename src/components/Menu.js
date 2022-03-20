@@ -8,7 +8,7 @@ const Menu = ({ setLineWidth, setLineColor, clearCanvas }) => {
     <div className="menu">
     <div className="slider-container">
       <label className="icon brush"></label>
-      
+
       <input
         className="slider"
         type="range"
@@ -20,8 +20,8 @@ const Menu = ({ setLineWidth, setLineColor, clearCanvas }) => {
         }}
       />
       </div>
-      
-      
+
+
       <input
         className="color"
         id="color"
