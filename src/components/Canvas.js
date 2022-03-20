@@ -5,11 +5,12 @@ import Menu from "./Menu";
 const Canvas = (props) => {
   //changes Canvas size with screen width 
   const screenWidth = window.innerWidth - window.innerWidth/10 + "px";
-  const screenHeight = window.screen.height - window.screen.height/3 + "px";
+  const screenHeight = window.screen.height - window.screen.height/2 + "px";
   const width = screenWidth;
   const height = screenHeight;
+  // const height = "500px";
 
-  const lineWidth = props.lineWidth
+  const lineWidth = props.lineWidth;
   const lineColor = props.lineColor;
 
   const canvasRef = props.canvasRef;

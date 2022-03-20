@@ -220,7 +220,6 @@
 
   .graphic-container {
     height: 50px;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,7 +229,6 @@
     margin-top: 10px;
     width: 300px;
     font-size: 1.2rem;
-    /* border: 2px solid white; */
   }
 
   .menu {
@@ -239,7 +237,6 @@
     height: 150px;
     flex-wrap: wrap;
     width: 300px;
-    /* border: 2px solid green; */
   }
 }
 
@@ -248,7 +245,6 @@
 
   .graphic-container {
     height: 50px;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -258,7 +254,6 @@
     margin-top: 10px;
     width: 300px;
     font-size: 1.2rem;
-    /* border: 2px solid white; */
   }
   .canvas {
     position: relative;
@@ -269,7 +264,6 @@
     height: 150px;
     flex-wrap: wrap;
     width: 300px;
-    /* border: 2px solid red; */
   }
 }
  /* iPhone XR and larger mobile phones  */
@@ -277,7 +271,6 @@
 
   .graphic-container {
     height: 50px;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,7 +280,6 @@
     margin-top: 10px;
     width: 300px;
     font-size: 1.2rem;
-    /* border: 2px solid white;  */
   }
   .canvas {
     position: relative;
