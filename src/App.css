@@ -16,26 +16,28 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  /* border: 2px solid white; */
 
-}
-/* splash logo */
-.image {
-  width: 180px;
-  height: 180px;
-  background-image: url("./Images/paint.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  margin: 0 -280px 0 0;
 }
 
 /* "PAINT SPLASH Text */
 .headingH1 {
+  position: relative;
   color: white;
   font-size: 3rem;
   text-align: center;
   font-family: 'Luckiest Guy', sans-serif;
   letter-spacing: 4px;
-
+  margin-top: 50px;
+}
+.graphic-container {
+  width: 400px;
+  height: 150px;
+  background-image: url("./Images/paint.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
 }
 
 
