@@ -1,0 +1,18 @@
+{
+  "files": {
+    "main.css": "/react-paint/static/css/main.0f4f52e0.css",
+    "main.js": "/react-paint/static/js/main.48f863b9.js",
+    "static/js/787.abb6f6a6.chunk.js": "/react-paint/static/js/787.abb6f6a6.chunk.js",
+    "static/media/paint.png": "/react-paint/static/media/paint.1ca7574c7e19ae05c604.png",
+    "index.html": "/react-paint/index.html",
+    "static/media/brush.svg": "/react-paint/static/media/brush.5eba1e86d5d13475930e.svg",
+    "static/media/bin-white.svg": "/react-paint/static/media/bin-white.68aade56655f922f91f9.svg",
+    "main.0f4f52e0.css.map": "/react-paint/static/css/main.0f4f52e0.css.map",
+    "main.48f863b9.js.map": "/react-paint/static/js/main.48f863b9.js.map",
+    "787.abb6f6a6.chunk.js.map": "/react-paint/static/js/787.abb6f6a6.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0f4f52e0.css",
+    "static/js/main.48f863b9.js"
+  ]
+}
